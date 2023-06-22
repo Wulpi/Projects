@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+{% load static %}
+{% load carton_tags %}
+{% get_cart as cart %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <title>Restauracja</title>
+  </head>
+    <body style="text-align:center">
+        <ul class="nav nav-pills nav-fill justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" style = "color: rgb(208, 130, 61)" href="{% url 'index' %}">Strona Główna</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style = "color: rgb(208, 130, 61)" href="{% url 'menu' %}">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style = "color: rgb(208, 130, 61)" href="{% url 'contact' %}">Kontakt</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" style="background-color: rgb(24, 24, 24)" href="{% url 'orders' %}">Zamówienia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style = "color: rgb(208, 130, 61)" href="{% url 'about' %}">O nas</a>
+            </li>
+          </ul>
+        </div>
+        {% block content %}
+          <h1 style="text-align: center">Wybierz Danie!</h1>
+          <button type="button" class="btn" style="background-color: rgb(24, 24, 24); color: white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Koszyk
+          </button>
+          <p></p>
+            <table class = ".table-container">
+              <thead>
+                <tr>
+                  <th>Produkt</th>
+                  <th>Opis</th>
+                  <th>Cena</th>
+                  <th>Wybierz</th>
+                </tr>
+              </thead>
+              <tbody>
+                  {% for product in products %}
+                  <tr>
+                      <td>{{ product.product_name }}</td>
+                      <td>{{ product.decription }}</td>
+                      <td>{{ product.price }} zł</td>
+                      <td>
+                        <form method="post">
+                          {% csrf_token %}
+                          <input type="hidden" name="product_id_add" value="{{ product.id }}">
+                          <button class="btn" style="background-color: rgb(24, 24, 24); color: white " type="submit">+</button>
+                        </form>
+                      </td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+            </table>
+          {% endblock %}
+      </div>
+
+      
+
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content" style="background-color: rgb(165, 155, 145)">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Koszyk</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="text-align: left">
+              {% for item in cart.items %}
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm">
+                    <p>{{ item.product }}</p>
+                  </div>
+                  <div class="col-6">
+                    <p>Ilość: {{ item.quantity }}</p>
+                  </div>
+                  <div class="col-sm">
+                    <form method="post">
+                      {% csrf_token %}
+                      <input type="hidden" name="product_id_remove" value="{{ item.product.id }}">
+                      <button class="btn" style="background-color: rgb(24, 24, 24); color: white" type="submit">-</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+                <p style="text-align: right;">Suma: {{ cart.total }}zł</p>
+            </div>
+            <div class="modal-footer">
+              <form method="post">
+                {% csrf_token %}
+                <input type="hidden" name="clear" value="True">
+                <button class="btn" type="submit" style="background-color: rgb(24, 24, 24); color: white" >Wyczyść koszyk</button>
+              </form>
+              <button type="button" class="btn" style="background-color: rgb(24, 24, 24); color: white" data-bs-dismiss="modal">Zamknij</button>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        
+      </div>
+
+        <footer class="mt-auto">
+          <div class="footer-left">
+            Copyright&copy; by Michał Jaźwiński
+          </div>
+          <div class="footer-center">
+            Aktualny czas: <span id="clock"></span>
+          </div>
+          <div class="footer-right">
+            <a class="footer-img1" href="https://www.facebook.com/">
+              <img src="{% static 'images/facebook.svg' %}" alt="Facebook">
+            </a>
+            <a class="footer-img2"href="https://www.instagram.com/">
+              <img src="{% static 'images/instagram.svg' %}" alt="Instagram">
+            </a>
+            <a class="footer-img3"href="https://www.tiktok.com/">
+              <img src="{% static 'images/tiktok.svg' %}" alt="Instagram">
+            </a>
+          </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+          $(document).ready(function() {
+            function updateClock() {
+                var now = new Date();
+                var hours = now.getHours();
+                var minutes = now.getMinutes();
+                var seconds = now.getSeconds();
+                var timeString = hours + ':' + minutes + ':' + seconds;
+                $('#clock').text(timeString);
+            }
+            setInterval(updateClock, 1000);
+          });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </body>
+</html>
