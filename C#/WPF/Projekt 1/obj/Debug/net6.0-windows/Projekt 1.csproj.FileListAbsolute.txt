@@ -1,0 +1,28 @@
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\bin\Debug\net6.0-windows\Projekt 1.exe
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\bin\Debug\net6.0-windows\Projekt 1.deps.json
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\bin\Debug\net6.0-windows\Projekt 1.runtimeconfig.json
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\bin\Debug\net6.0-windows\Projekt 1.dll
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\bin\Debug\net6.0-windows\Projekt 1.pdb
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\bin\Debug\net6.0-windows\System.Data.SQLite.dll
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\bin\Debug\net6.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\bin\Debug\net6.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\bin\Debug\net6.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\bin\Debug\net6.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\obj\Debug\net6.0-windows\Projekt 1.csproj.AssemblyReference.cache
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\obj\Debug\net6.0-windows\Projekt 1_MarkupCompile.cache
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\obj\Debug\net6.0-windows\Projekt 1_MarkupCompile.lref
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\obj\Debug\net6.0-windows\Projekt 1.g.resources
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\obj\Debug\net6.0-windows\Projekt 1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\obj\Debug\net6.0-windows\Projekt 1.AssemblyInfoInputs.cache
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\obj\Debug\net6.0-windows\Projekt 1.AssemblyInfo.cs
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\obj\Debug\net6.0-windows\Projekt 1.csproj.CoreCompileInputs.cache
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\obj\Debug\net6.0-windows\Projekt 1.csproj.CopyComplete
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\obj\Debug\net6.0-windows\Projekt 1.dll
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\obj\Debug\net6.0-windows\refint\Projekt 1.dll
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\obj\Debug\net6.0-windows\Projekt 1.pdb
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\obj\Debug\net6.0-windows\Projekt 1.genruntimeconfig.cache
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\obj\Debug\net6.0-windows\ref\Projekt 1.dll
+C:\Users\micha\OneDrive\Pulpit\Szkola\Programowanie\WPF\Projekt 1\Projekt 1\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs

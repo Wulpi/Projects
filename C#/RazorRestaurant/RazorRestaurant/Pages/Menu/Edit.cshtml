@@ -1,0 +1,51 @@
+﻿@page
+@model RazorRestaurant.Pages.Menu.EditModel
+
+@{
+    ViewData["Title"] = "Edytuj";
+}
+
+<h1>Edytuj produkt</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Product.Id" />
+            <div class="form-group">
+                <label asp-for="Product.Name" class="control-label">Nazwa</label>
+                <input asp-for="Product.Name" class="form-control" />
+                <span asp-validation-for="Product.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.Description" class="control-label">Opis</label>
+                <input asp-for="Product.Description" class="form-control" />
+                <span asp-validation-for="Product.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.Price" class="control-label">Cena</label>
+                <input asp-for="Product.Price" class="form-control" />
+                <span asp-validation-for="Product.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.image" class="control-label">Zdjęcie</label>
+                <input type="file" asp-for="ImageFile" class="form-control" />
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="row">
+                <div class="form-group col-sm">
+                    <input type="submit" value="Dodaj" class="btn btn-primary" />
+                </div>
+                <div class="col-sm" style="text-align: right">
+                    <a asp-page="Index" class="btn btn-primary">Powrót do Menu</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,60 @@
+﻿@page
+@model RazorRestaurant.Pages.Menu.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h1>Menu</h1>
+    </div>
+    <div class="col-sm" style="text-align: right">
+      <p>
+        <a class="btn btn-primary" asp-page="Create">Dodaj</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+<table class="table">
+    <thead class="bg-primary">
+        <tr>
+            <th scope="col">
+                Nazwa
+            </th>
+            <th scope="col">
+                Opis
+            </th>
+            <th scope="col">
+                Cena
+            </th>
+            <th scope="col">
+                Akcje
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Product) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                <a class="btn btn-primary" asp-page="./Edit" asp-route-id="@item.Id">Edytuj</a>
+                <a class="btn btn-primary" asp-page="./Details" asp-route-id="@item.Id">Sczegóły</a>
+                <a class="btn btn-primary" asp-page="./Delete" asp-route-id="@item.Id">Usuń</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,48 @@
+﻿@page
+@model RazorRestaurant.Pages.Menu.DeleteModel
+
+@{
+    ViewData["Title"] = "Usuń";
+}
+
+<h1>Usuń produkt</h1>
+
+<h3>Jesteś pewny, że chcesz usunąc ten produkt?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            <label asp-for="Product.Name" class="control-label">Nazwa</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Product.Name)
+        </dd>
+        <dt class="col-sm-2">
+            <label asp-for="Product.Description" class="control-label">Opis</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Product.Description)
+        </dd>
+        <dt class="col-sm-2">
+            <label asp-for="Product.Price" class="control-label">Cena</label>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Product.Price)
+        </dd>
+        <dt class="col-sm-2">
+            <label asp-for="Product.image" class="control-label">Zdjęcie</label>
+        </dt>
+        <dd class="col-sm-10">
+            @if (Model.Product.image != null)
+            {
+                    <img src="data:image/jpg;base64,@Convert.ToBase64String(Model.Product.image)" alt="Product Image" />
+            }
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Product.Id" />
+        <input type="submit" value="Usuń" class="btn btn-danger" /> |
+        <a asp-page="./Index" class="btn btn-primary">Powrót do listy</a>
+    </form>
+</div>
